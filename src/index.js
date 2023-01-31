@@ -33,4 +33,9 @@ form.addEventListener('submit', (event) => {
   showScore();
 });
 
+const referesh = document.getElementById('referesh');
+referesh.addEventListener('click', () => {
+  showScore();
+});
+
 showScore();
