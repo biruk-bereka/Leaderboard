@@ -58,7 +58,7 @@
 
 > Here is the link for live version
 
-- [Live Demo Link]()
+- [Live Demo Link](https://biruk-bereka.github.io/Leaderboard/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
