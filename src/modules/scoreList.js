@@ -5,8 +5,10 @@ export default class ScoreList {
       localStorage.setItem('Scores', JSON.stringify(scoreCollection));
     }
 
-    getList = () => {
-      const lists = JSON.parse(localStorage.getItem('Scores'));
+    getList = async () => {
+      const lists = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/m6jsBD8Ruva3CFmD5qlX/scores/')
+                          .then(response => response.json())
+                          .then(data => data.result);            
       if (lists) return lists;
       return [];
     }
