@@ -5,16 +5,16 @@ import ScoreList from './modules/scoreList.js';
 const form = document.getElementById('score-form');
 const list = new ScoreList();
 
-const showScore = () => {
+const showScore = async () => {
   const scoreList = document.querySelector('.score-list');
   scoreList.innerHTML = '';
-  const lists = list.getList();
+  const lists = await list.getScore();
 
   if (lists.length > 0) {
     lists.forEach((list) => {
       const li = document.createElement('li');
       li.innerHTML = `
-         ${list.name}: ${list.score}
+         ${list.user}: ${list.score}
       `;
       scoreList.appendChild(li);
     });
@@ -30,7 +30,8 @@ form.addEventListener('submit', (event) => {
   const score = document.getElementById('score').value;
 
   addScore(name, score);
-  showScore();
+  document.getElementById('name').value = '';
+  document.getElementById('score').value = '';
 });
 
 const referesh = document.getElementById('referesh');

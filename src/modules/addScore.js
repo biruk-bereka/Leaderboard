@@ -8,7 +8,7 @@ const addScore = (name, score) => {
     score,
   };
 
-  list.setList(newScore);
+  list.setScore(newScore);
 };
 
 export default addScore;
