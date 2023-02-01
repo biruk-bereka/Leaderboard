@@ -30,7 +30,8 @@ form.addEventListener('submit', (event) => {
   const score = document.getElementById('score').value;
 
   addScore(name, score);
-  showScore();
+  document.getElementById('name').value = '';
+  document.getElementById('score').value = '';
 });
 
 const referesh = document.getElementById('referesh');
