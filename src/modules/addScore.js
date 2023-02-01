@@ -7,7 +7,7 @@ const addScore = (name, score) => {
     name,
     score,
   };
-  
+
   list.setList(newScore);
 };
 

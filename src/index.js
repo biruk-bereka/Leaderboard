@@ -9,7 +9,7 @@ const showScore = async () => {
   const scoreList = document.querySelector('.score-list');
   scoreList.innerHTML = '';
   const lists = await list.getList();
-  
+
   if (lists.length > 0) {
     lists.forEach((list) => {
       const li = document.createElement('li');
