@@ -1,5 +1,5 @@
 export default class ScoreList {
-    setList = async (newScore) => {
+    setScore = async (newScore) => {
       await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/m6jsBD8Ruva3CFmD5qlX/scores/', {
         method: 'POST',
         body: JSON.stringify({
@@ -13,7 +13,7 @@ export default class ScoreList {
         .then((response) => response.json());
     }
 
-    getList = async () => {
+    getScore = async () => {
       const lists = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/m6jsBD8Ruva3CFmD5qlX/scores/')
         .then((response) => response.json())
         .then((data) => data.result);
