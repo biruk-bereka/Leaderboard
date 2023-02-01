@@ -1,14 +1,41 @@
-import _ from 'lodash';
 import './style.css';
+import addScore from './modules/addScore.js';
+import ScoreList from './modules/scoreList.js';
 
- function component() {
-   const element = document.createElement('div');
+const form = document.getElementById('score-form');
+const list = new ScoreList();
 
-   // Lodash, now imported by this script
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+const showScore = () => {
+  const scoreList = document.querySelector('.score-list');
+  scoreList.innerHTML = '';
+  const lists = list.getList();
 
-   return element;
- }
+  if (lists.length > 0) {
+    lists.forEach((list) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+         ${list.name}: ${list.score}
+      `;
+      scoreList.appendChild(li);
+    });
+  } else {
+    scoreList.innerHTML = 'There is no score for now.';
+  }
+};
 
- document.body.appendChild(component());
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const score = document.getElementById('score').value;
+
+  addScore(name, score);
+  showScore();
+});
+
+const referesh = document.getElementById('referesh');
+referesh.addEventListener('click', () => {
+  showScore();
+});
+
+showScore();
