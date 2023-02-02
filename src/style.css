@@ -11,7 +11,8 @@ li {
 #page-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  font-size: 30px;
   gap: 1rem;
 }
 
@@ -81,6 +82,10 @@ button {
   font-weight: 700;
 }
 
+.form {
+  margin-top: 135px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -109,4 +114,5 @@ form input {
 #submit {
   color: white;
   background-color: green;
+  align-self: flex-end;
 }
