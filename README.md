@@ -50,9 +50,11 @@
 - Project setup by webpack.
 - Users can add their score.
 - User can see all score submitted in the leaderboard.
-### New Features
 - Implement the "Refresh" button that will get all scores for a game created by you from the API
 - Implement the form "Submit" button that will save a score for a game created by user
+  ### New Features
+  - Style leaderboard 
+  - 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -117,7 +119,7 @@ npm install
 
 > Future features
 
-- [ ] **Add styling for the leaderboard**
+- [ ] **Update leadboard with feedback**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
